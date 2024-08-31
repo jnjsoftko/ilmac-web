@@ -1,0 +1,200 @@
+/*-------------------------------------------------------------------
+    작성날짜 : 2020-12-03
+    수정날짜 : 
+    *(주의사항 : )
+-------------------------------------------------------------------*/
+@charset "UTF-8";
+/*
+    * comps.css
+    * 1024 ~ (PC)
+*/
+/* btn */
+.btn-area {
+    text-align: center;
+}
+
+.btnA {
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    padding: 17px 52px;
+    font: 500 18px 'noto';
+    line-height: 1;
+    background-position: 100% 0;
+    background-size: 250% 100%;
+    transition: all .2s ease-in;
+    cursor: pointer;
+}
+
+.btnA.color-white {
+    border: 1px solid #FFF;
+    color: #FFF;
+}
+
+.btnA.color-black {
+    color: #161616;
+}
+
+.btnA.color-gray {
+    border: 1px solid #2D2D2D;
+    color: #666;
+}
+
+.btnA.bg-gradiBlue {
+    background: rgb(34,107,187);
+    background: linear-gradient(105deg, rgba(34,107,187,1) 0%, rgba(0,75,156,1) 100%);
+    color: #FFF;
+}
+
+.btnA.disabled {
+    color: #555 !important;
+}
+
+.btnB {
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    padding: 18px 58px;
+    font: 500 16px 'noto';
+    line-height: 1;
+    background-position: 100% 0;
+    background-size: 250% 100%;
+    transition: all .2s ease-in;
+    cursor: pointer;
+}
+
+.btnB.color-black {
+    border: 1px solid #171717;
+    color: #333;
+}
+
+.btnB.bg-white {
+    background-color: #FFF;
+}
+
+.btnC {
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    padding: 21px 91px;
+    font: 500 17px 'noto';
+    line-height: 1;
+    background-position: 100% 0;
+    background-size: 250% 100%;
+    transition: all .2s ease-in;
+    cursor: pointer;
+}
+
+.btnC.color-black {
+    border: 1px solid #1C1C1C;
+    color: #1C1C1C;
+}
+
+.btnC.bg-white {
+    background-color: #FFF;
+}
+
+.btnC.ico-plus:after {
+    content: '';
+    position: absolute;
+    left: 66%;
+    top: 50%;
+    transform: translate(-66%, -50%);
+    width: 11px;
+    height: 11px;
+    background: transparent url('../img/icons/ico-plus-bl.png') 50% 50%/11px 11px no-repeat;
+    transition: all .2s ease-in;
+}
+
+.btnA.hide,
+.btnB.hide,
+.btnC.hide {
+    display: none;
+}
+
+/* 모바일 & 태블릿 공통 */
+@media(max-width: 1023px) {  
+
+    .btnA {
+        z-index: 1;
+        padding: 12px 60px;
+        font: 400 14px 'noto';
+        line-height: 1;
+    }
+
+    .btnB {
+        padding: 12px 60px;
+        font: 500 14px 'noto';
+    }
+
+    .btnC {
+        padding: 12px 60px;
+        font: 500 14px 'noto';
+    }
+
+    .btnC.ico-plus:after {
+        left: 71%;
+        transform: translate(-71%, -50%);
+        width: 10px;
+        height: 10px;
+        background: transparent url('../img/icons/ico-plus-bl.png') 50% 50%/10px 10px no-repeat;
+    }
+}
+
+/* 태블릿 */
+@media (min-width: 768px) and (max-width: 1023px) {
+    
+}
+
+/* 모바일 */
+@media(max-width: 767px) {
+
+}
+
+
+/* PC */
+@media(min-width: 1023px) {
+    
+    /* 버튼 호버 효과 */
+    .btnA.color-white {
+        background-image: linear-gradient(to left, transparent, transparent 50%, #FFF 50%, #FFF);
+    }
+
+    .btnA.color-gray {
+        border: 1px solid #666;
+        background-image: linear-gradient(to left, transparent, transparent 50%, #666 50%, #666);
+    }
+
+    .btnA.color-gray:hover {
+        background-position: 0 0;
+        color: #FFF;
+    }
+
+
+    .btnB.color-black {
+        border: 1px solid #171717;
+        background-image: linear-gradient(to left, transparent, transparent 50%, #171717 50%, #171717);
+    }
+
+    .btnB.color-black:hover {
+        background-position: 0 0;
+        color: #FFF;
+    }
+
+
+    .btnC.color-black {
+        border: 1px solid #1C1C1C;
+        background-image: linear-gradient(to left, transparent, transparent 50%, #1C1C1C 50%, #1C1C1C);
+    }
+
+    .btnC.color-black:hover {
+        background-position: 0 0;
+        color: #FFF;
+    }
+
+    .btnC.ico-plus:hover:after {
+        background: transparent url('../img/icons/ico-plus-wh.png') 50% 50%/11px 11px no-repeat;
+    }
+
+
+}
